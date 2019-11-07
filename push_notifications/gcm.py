@@ -135,6 +135,8 @@ def _cm_send_request(
 				notification_payload[key] = value_from_kwargs
 		if notification_payload:
 			payload["notification"] = notification_payload
+	else:
+		payload["notification"] = None
 
 	if data:
 		payload["data"] = data
